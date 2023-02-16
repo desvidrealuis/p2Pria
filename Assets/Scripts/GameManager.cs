@@ -27,6 +27,14 @@ public class GameManager : MonoBehaviour {
                     break;
                 case UnityWebRequest.Result.Success:
                     Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
+                    
+                    Fotos datosFotos = JsonUtility.FromJson<Fotos>(webRequest.downloadHandler.text);
+                       
+                    Debug.Log($"numCAM: "+ datosFotos.listaCamaras.Count);
+                    Debug.Log($"randomCAM: "+ Random.Range(0, datosFotos.listaCamaras.Count));
+                    Debug.Log($"url: "+ datosFotos.listaCamaras[0].imaxeCamara);
+                    Debug.Log($"urlRandom: "+ datosFotos.listaCamaras[Random.Range(0, datosFotos.listaCamaras.Count)].imaxeCamara);
+
                     break;
             }
         }
