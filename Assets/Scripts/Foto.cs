@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class Foto : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+[System.Serializable]
+public class Foto {
+    public string imaxeCamara;
+    public string concello;
+    public string dataUltimaAct;
+    public string idConcello;
+    public string identificador;
+    public string imaxeCamaraMini;
+    public string lat;
+    public string lon;
+    public string nomeCamara;
+    public string provincia;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
